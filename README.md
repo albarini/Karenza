@@ -7,29 +7,33 @@ Sitio de demostración de una tienda de moda, en español y adaptable a móviles
 - Catálogo de 249 productos, colecciones y páginas de producto.
 - Búsqueda, filtros, selección de variantes y vista rápida.
 - Carrito guardado en el navegador.
-- Imágenes y fuentes incluidas en `dist/assets/`.
+- Imágenes y fuentes incluidas en `assets/`.
+
+## Sitio publicado
+
+https://albarini.github.io/Karenza/
 
 ## Ejecutar en tu computadora
 
-Con Python 3 instalado, abre una terminal en esta carpeta y ejecuta:
+Guarda este repositorio en una carpeta llamada `Karenza`. Con Python 3 instalado, abre una terminal en la carpeta que contiene `Karenza` y ejecuta:
 
 ```sh
-python -m http.server 8080 --directory dist
+python -m http.server 8080
 ```
 
-Abre **http://localhost:8080**. El sitio debe abrirse mediante un servidor HTTP para cargar el catálogo correctamente.
+Abre **http://localhost:8080/Karenza/**. El sitio debe abrirse mediante un servidor HTTP para cargar el catálogo correctamente.
 
 ## Estructura
 
-- `dist/index.html`: página de inicio.
-- `dist/app.js`: navegación e interacciones.
-- `dist/style.css` y `dist/details.css`: diseño y estilos.
-- `dist/catalog.json`, `dist/collections.json` y `dist/sections.json`: catálogo y contenido.
-- `dist/products/`, `dist/collections/` y `dist/pages/`: páginas con rutas propias.
+- `index.html`: página de inicio.
+- `app.js`: navegación e interacciones.
+- `style.css` y `details.css`: diseño y estilos.
+- `catalog.json`, `collections.json` y `sections.json`: catálogo y contenido.
+- `products/`, `collections/` y `pages/`: páginas con rutas propias.
 
 ## Alojamiento
 
-Publica el contenido de `dist/` en la raíz de un alojamiento estático. Las rutas actuales parten de `/`; para alojarlo en un subdirectorio como `/Karenza/`, primero hay que adaptar esas rutas.
+GitHub Pages publica la rama `main`, carpeta raíz (`/`). El archivo `index.html` es la entrada de la tienda y `.nojekyll` evita que se publique el README como sitio. Las rutas están adaptadas a `/Karenza/`. No se requiere un proceso de compilación ni dependencias.
 
 ## Estado de la tienda
 
